@@ -10,7 +10,7 @@ const sequelize = new Sequelize({
 });
 
 const students = require("./models/students");
-const books = require("./models/books");
+const books = require("./models/books")(sequelize);
 
 const init = async function() {
     try {
