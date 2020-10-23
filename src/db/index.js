@@ -9,7 +9,7 @@ const sequelize = new Sequelize({
     database: "admin",
 });
 
-const students = require("./models/students");
+const students = require("./models/students")(sequelize);
 const books = require("./models/books")(sequelize);
 
 const init = async function() {
